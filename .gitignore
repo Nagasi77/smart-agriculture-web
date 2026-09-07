@@ -1,0 +1,64 @@
+# ========================
+# Python / Backend
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+*.so
+
+# ========================
+# Node / Frontend
+# ========================
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# Uploaded Images (runtime)
+# ========================
+backend/static/uploads/
+
+# ========================
+# ML Model Weights
+# ========================
+*.h5
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+!backend/app/ml/.gitkeep
+
+# ========================
+# IDE & OS
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ========================
+# Logs & Misc
+# ========================
+*.log
+*.pid
+*.seed
+.cache/
