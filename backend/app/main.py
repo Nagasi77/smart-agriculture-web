@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from app.config import settings, UPLOAD_PATH
 from app.database import engine, Base, AsyncSessionLocal
 from app.services.seeder import seed_default_admin
-from app.routers import auth
+from app.routers import auth, iot
 
 
 @asynccontextmanager
@@ -47,6 +47,7 @@ app.mount("/static/uploads", StaticFiles(directory=str(UPLOAD_PATH)), name="uplo
 
 # Registrasi Router
 app.include_router(auth.router, prefix="/api/auth", tags=["Autentikasi Operator"])
+app.include_router(iot.router, prefix="/api/iot", tags=["Komunikasi IoT"])
 
 
 @app.get("/api/health", tags=["System"])
